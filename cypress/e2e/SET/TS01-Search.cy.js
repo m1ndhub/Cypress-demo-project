@@ -3,7 +3,7 @@ describe('Test scenario - search DEMO', () => {
         cy.visit('https://www.set.or.th/th/home')
     })
 
-    it('TC01 - Searchbox in homepage', () => {
+    it.only('TC01 - Searchbox in homepage', () => {
         cy.get('.search-input > :nth-child(1) > .input-search').type('SET')
         cy.get('#searchDropdownContainer > div > div:nth-child(2) > div > div:nth-child(2) > div.stocks-wrapper > div').then((data) => {
             for (let i = 1; i <= data.length; i++) {
